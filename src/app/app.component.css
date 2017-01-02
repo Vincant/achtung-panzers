@@ -1,0 +1,22 @@
+.clear-ul{
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+.panzer-list{
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.panzer-list li {
+    float: left;
+    height: 24vw;
+    max-height: 300px;
+    width: 33.3%;
+    padding: 15px;
+}
+.panzer-list img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}

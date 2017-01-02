@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------*/
+/*------------------------- Grid-1366 --------------------------*/
+/*--------------------------------------------------------------*/
+    .grid,.grid-m{width:100%; min-width:320px; max-width:1366px; margin-left:auto; margin-right:auto; padding:0 15px;}
+    .lg-10           {width: 10%;}
+            .wd-15   {width: 15%;}
+    .lg-16           {width: 16.66%;}
+    .lg-20, .wd-20   {width: 20%;}
+    .lg-25, .wd-25   {width: 25%;}
+    .lg-30, .wd-30   {width: 30%;}
+    .lg-33, .wd-33   {width: 33.3%;}
+    .lg-40, .wd-40   {width: 40%;}
+    .lg-50, .wd-50   {width: 50%;}
+    .lg-60, .wd-60   {width: 60%;}
+    .lg-66, .wd-66   {width: 66.6%;}
+    .lg-70, .wd-70   {width: 70%;}
+    .lg-75, .wd-75   {width: 75%;}
+    .lg-80, .wd-80   {width: 80%;}
+            .wd-85   {width: 85%;}
+    .lg-90           {width: 90%;}
+    .lg-100          {width: 100%;}
+    .lg-none         {display: none;}
+    .md-only         {display: none !important;}
+    .lg-10,.lg-16,.lg-20,.lg-25,.lg-30,.lg-33,.lg-40,.lg-50,.lg-60,.lg-66,.lg-70,.lg-75,.lg-80,.lg-100{position:relative;float:left;min-height:1px;}
+
+/*--------------------------------------------------------------*/
+/*------------------------ Grid-1024 ----------------------------*/
+/*--------------------------------------------------------------*/
+@media only screen and (max-width:1024px){
+    .md-25{width: 25%}
+    .md-33{width: 33.3%}
+    .md-40{width: 40%}
+    .md-50{width: 50%}
+    .md-60{width: 60%}
+    .md-66{width: 66.6%}
+    .md-75{width: 75%}
+    .md-100{width:100%}
+    .md-none{display:none !important;}
+    .md-only{display: block !important;}
+}
+/*--------------------------------------------------------------*/
+/*------------------------ Grid-768 ----------------------------*/
+/*--------------------------------------------------------------*/
+/*@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+    .sm-33{width: 33.3%}
+    .sm-50{width: 50%}
+    .sm-66{width: 66.6%}
+    .sm-100{width:100%}
+    .sm-33,.sm-50,.sm-66,.sm-100{position:relative; float:left; min-height:1px;}
+    .sm-none{display:none !important;}
+    .sm-only{display: block !important;}
+}*/
