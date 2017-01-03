@@ -10,10 +10,12 @@
 }
 .panzer-list li {
     float: left;
-    height: 24vw;
-    max-height: 300px;
     width: 33.3%;
     padding: 15px;
+}
+.panzer-list .img-wrap{
+  height: 22vw;
+  max-height: 300px;
 }
 .panzer-list img{
     display: block;

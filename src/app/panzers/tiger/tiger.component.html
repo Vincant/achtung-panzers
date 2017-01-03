@@ -1,10 +1,12 @@
 <h3 class="title-md">Germany panzer: {{title}}</h3>
 <ul class="clear-ul panzer-list">
-  <li><img src="assets/images/tiger_1.jpg" alt=""></li>
-  <li><img src="assets/images/tiger_2.jpg" alt=""></li>
-  <li><img src="assets/images/tiger_3.jpg" alt=""></li>
-  <li><img src="assets/images/tiger_4.jpg" alt=""></li>
-  <li><img src="assets/images/tiger_5.jpg" alt=""></li>
-  <li><img src="assets/images/tiger_6.jpg" alt=""></li>
+  <li *ngFor="let PanzerPart of panzers">
+    <h3>{{PanzerPart.name}}</h3>
+    <span *ngIf="PanzerPart.number < 4">ID: {{PanzerPart.id}},</span>
+    <span>Price: {{PanzerPart.price | currency:'EUR':true}}</span>
+    <div class="img-wrap">
+      <img src="{{PanzerPart.src}}" alt="">
+    </div>
+  </li>
 </ul>
 
