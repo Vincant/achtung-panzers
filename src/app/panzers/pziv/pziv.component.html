@@ -1,10 +1,11 @@
-<h3 class="title-md">Germany panzer: {{title}}</h3>
+<h2 class="title-md">Germany panzer: {{title}}</h2>
 <ul class="clear-ul panzer-list">
-  <li><img src="assets/images/pziv_1.jpg" alt=""></li>
-  <li><img src="assets/images/pziv_2.jpg" alt=""></li>
-  <li><img src="assets/images/pziv_3.jpg" alt=""></li>
-  <li><img src="assets/images/pziv_4.jpg" alt=""></li>
-  <li><img src="assets/images/pziv_5.jpg" alt=""></li>
-  <li><img src="assets/images/pziv_6.jpg" alt=""></li>
+  <li *ngFor="let onePanzer of allPanzers">
+    <h3> {{onePanzer.name}} </h3>
+    <span>Price: {{onePanzer.price | currency:'EUR':true}}</span>
+    <div class="img-wrap">
+      <img src="{{onePanzer.src}}" alt="">
+    </div>
+  </li>
 </ul>
 

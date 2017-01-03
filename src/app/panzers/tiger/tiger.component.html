@@ -1,11 +1,11 @@
-<h3 class="title-md">Germany panzer: {{title}}</h3>
+<h2 class="title-md">Germany panzer: {{title}}</h2>
 <ul class="clear-ul panzer-list">
-  <li *ngFor="let PanzerPart of panzers">
-    <h3>{{PanzerPart.name}}</h3>
-    <span *ngIf="PanzerPart.number < 4">ID: {{PanzerPart.id}},</span>
-    <span>Price: {{PanzerPart.price | currency:'EUR':true}}</span>
+  <li *ngFor="let onePanzer of allPanzers">
+    <h3> {{onePanzer.name}} </h3>
+    <span *ngIf="onePanzer.inStock < 4">id: {{onePanzer.id}} </span> <br>
+    <span>Price: {{onePanzer.price | currency:'EUR':true}}</span>
     <div class="img-wrap">
-      <img src="{{PanzerPart.src}}" alt="">
+      <img src="{{onePanzer.src}}" alt="">
     </div>
   </li>
 </ul>

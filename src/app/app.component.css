@@ -4,18 +4,18 @@
     padding: 0;
 }
 .panzer-list{
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -10px;
+    margin-right: -10px;
     overflow: hidden;
 }
 .panzer-list li {
     float: left;
-    width: 33.3%;
-    padding: 15px;
+    width: 20%;
+    padding: 10px;
 }
 .panzer-list .img-wrap{
-  height: 22vw;
-  max-height: 300px;
+  height: 12vw;
+  max-height: 160px;
 }
 .panzer-list img{
     display: block;
