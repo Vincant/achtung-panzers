@@ -4,7 +4,7 @@ import { onePanzer } from '../models/panzer';
 //@Injectable()
 //export class PanzerPartService {
   //private panzerParts: PanzerPart[] = [
-export const ALLTIGER: onePanzer[] = [
+export let ALLTIGER: onePanzer[] = [
     {
       'id': 'tiger_1',
       'name': 'Tiger-1',
@@ -77,7 +77,7 @@ export const ALLTIGER: onePanzer[] = [
     }
   ];
 
-export const ALLPANTHER: onePanzer[] = [
+export let ALLPANTHER: onePanzer[] = [
   {
     'id': 'panther_1',
     'name': 'Panther-1',
@@ -150,7 +150,7 @@ export const ALLPANTHER: onePanzer[] = [
   }
 ];
 
-export const ALLPZIV: onePanzer[] = [
+export let ALLPZIV: onePanzer[] = [
   {
     'id': 'pziv_1',
     'name': 'PzIV-1',

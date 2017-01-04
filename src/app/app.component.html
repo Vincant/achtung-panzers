@@ -6,17 +6,17 @@
         <nav class="">
             <ul class="clear-ul inline-ul">
                 <li>
-                    <a id="tiger" routerLink="/tiger" routerLinkActive="active">
+                    <a [class.active]="true" id="tiger" routerLink="/tiger" routerLinkActive="active">
                         TIGER
                     </a>
                 </li>
                 <li>
-                    <a id="panther" routerLink="/panther" routerLinkActive="active">
+                    <a [class.active]="false" id="panther" routerLink="/panther" routerLinkActive="active">
                         PANTHER
                     </a>
                 </li>
                 <li>
-                    <a id="pziv" routerLink="/pziv" routerLinkActive="active">
+                    <a [class.active]="false" id="pziv" routerLink="/pziv" routerLinkActive="active">
                         PZIV
                     </a>
                 </li>

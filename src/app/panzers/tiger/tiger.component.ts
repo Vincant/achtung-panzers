@@ -14,4 +14,18 @@ export class TigerComponent {
   ngOnInit(){
     this.allPanzers = ALLTIGER;
   }
+
+  zoomImage(){
+
+  }
+  downQuantity(onePanzer){
+    if(onePanzer.inStock > 0){
+      onePanzer.inStock--;
+    }
+  }
+  upQuantity(onePanzer){
+    if(onePanzer.inStock < 10){
+      onePanzer.inStock++;
+    }
+  }
 }

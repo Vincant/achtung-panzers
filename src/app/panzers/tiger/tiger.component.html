@@ -2,10 +2,16 @@
 <ul class="clear-ul panzer-list">
   <li *ngFor="let onePanzer of allPanzers">
     <h3> {{onePanzer.name}} </h3>
-    <span *ngIf="onePanzer.inStock < 4">id: {{onePanzer.id}} </span> <br>
     <span>Price: {{onePanzer.price | currency:'EUR':true}}</span>
     <div class="img-wrap">
-      <img src="{{onePanzer.src}}" alt="">
+      <img [src]="onePanzer.src" alt="">
+    </div>
+    <button (click)="zoomImage(img)">zoom button</button>
+    <div class="quantity">
+      <div>inStock:<span class="current">{{onePanzer.inStock}}</span></div>
+      <button  class="decrease" (click)="downQuantity(onePanzer)" *ngIf="onePanzer.inStock > 0">-</button>
+      <input type="text" class="number" [(ngModel)]="onePanzer.inStock">
+      <button class="increase" (click)="upQuantity(onePanzer)" *ngIf="onePanzer.inStock < 10">+</button>
     </div>
   </li>
 </ul>
