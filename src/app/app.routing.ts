@@ -4,7 +4,7 @@ import {TigerComponent} from './panzers/tiger/tiger.component'
 import {PantherComponent} from './panzers/panther/panther.component';
 import {PzivComponent} from './panzers/pziv/pziv.component';
 
-const routes = [
+export const routes: Routes = [
   {path: '', redirectTo: 'tiger', pathMatch: 'full'},
   {path: 'tiger', component: TigerComponent},
   {path: 'panther', component: PantherComponent},

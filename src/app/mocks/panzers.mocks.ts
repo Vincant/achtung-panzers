@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
 import { onePanzer } from '../models/panzer';
 
-//@Injectable()
-//export class PanzerPartService {
-  //private panzerParts: PanzerPart[] = [
-export let ALLTIGER: onePanzer[] = [
+export let TIGERS: onePanzer[] = [
     {
       'id': 'tiger_1',
       'name': 'Tiger-1',
@@ -77,7 +73,7 @@ export let ALLTIGER: onePanzer[] = [
     }
   ];
 
-export let ALLPANTHER: onePanzer[] = [
+export let PANTHERS: onePanzer[] = [
   {
     'id': 'panther_1',
     'name': 'Panther-1',
@@ -150,7 +146,7 @@ export let ALLPANTHER: onePanzer[] = [
   }
 ];
 
-export let ALLPZIV: onePanzer[] = [
+export let PZIVS: onePanzer[] = [
   {
     'id': 'pziv_1',
     'name': 'PzIV-1',

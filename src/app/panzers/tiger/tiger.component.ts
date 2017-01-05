@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { onePanzer } from '../../models/panzer';
-import { ALLTIGER } from '../../services/panzer.service';
+import { TigerService } from '../../services/panzers.service';
 
 @Component({
   selector: 'app-panzers',
   templateUrl: './tiger.component.html',
-  styleUrls: ['./../../app.component.css', './tiger.component.css']
+  styleUrls: ['./../../app.component.css', './tiger.component.css'],
+  providers: [TigerService]
 })
 export class TigerComponent {
   title = 'Tiger';
+  @Input() subtitle = '';
   allPanzers: onePanzer[];
 
+  constructor(private tigerService: TigerService){}
+
   ngOnInit(){
-    this.allPanzers = ALLTIGER;
+    this.allPanzers = this.tigerService.getPanzers();
   }
 
   zoomImage(){

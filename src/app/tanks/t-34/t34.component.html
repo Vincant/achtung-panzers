@@ -1,0 +1,11 @@
+<h2 class="title-md">Soviet tank: {{title}}</h2>
+<ul class="clear-ul panzer-list">
+  <li *ngFor="let oneTank of allTanks">
+    <h3> {{oneTank.name}}</h3>
+    <span>Price: {{oneTank.price | currency:'EUR':true}}</span>
+    <div class="img-wrap">
+      <img [src]="oneTank.src" alt="">
+    </div>
+  </li>
+</ul>
+

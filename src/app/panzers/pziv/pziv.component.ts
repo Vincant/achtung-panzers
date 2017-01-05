@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { onePanzer } from '../../models/panzer';
-import { ALLPZIV } from "../../services/panzer.service";
+import { PzivService } from "../../services/panzers.service";
 
 @Component({
   selector: 'app-panzers-3',
   templateUrl: './pziv.component.html',
-  styleUrls: ['./../../app.component.css', './pziv.component.css']
+  styleUrls: ['./../../app.component.css', './pziv.component.css'],
+  providers: [PzivService]
 })
 export class PzivComponent {
   title = 'PzIV';
   allPanzers: onePanzer[];
 
+  constructor(private pzivService: PzivService){}
+
   ngOnInit(){
-    this.allPanzers = ALLPZIV;
+    this.allPanzers = this.pzivService.getPanzers();
   }
 }

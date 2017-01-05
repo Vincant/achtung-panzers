@@ -1,7 +1,7 @@
 <h2 class="title-md">Germany panzer: {{title}}</h2>
 <ul class="clear-ul panzer-list">
   <li *ngFor="let onePanzer of allPanzers">
-    <h3> {{onePanzer.name}} </h3>
+    <h3> {{onePanzer.name}} <span>{{subtitle}}</span></h3>
     <span>Price: {{onePanzer.price | currency:'EUR':true}}</span>
     <div class="img-wrap">
       <img [src]="onePanzer.src" alt="">
