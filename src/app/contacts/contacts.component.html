@@ -1,0 +1,23 @@
+<h2 class="title-md">{{title}}</h2>
+<form (ngSubmit)="onSubmit(contacts)" #contacts="ngForm">
+  <ul class="clear-ul">
+    <li>
+      <input type="text" id="user_name" name="user-name" [(ngModel)]="user.username" required>
+    </li>
+    <li>
+      <input type="text" id="user_email" name="user-email" [(ngModel)]="user.useremail">
+    </li>
+    <li>
+      <input type="text" id="user_machine" name="user-machine" [(ngModel)]="user.usermachine">
+    </li>
+    <li *ngFor="let g of genders">
+      <label for="">
+        <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="g">
+        {{g}}
+      </label>
+    </li>
+    <button type="reset">Cancel</button>
+    <button type="submit">Submit</button>
+  </ul>
+</form>
+
