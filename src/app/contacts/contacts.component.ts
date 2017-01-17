@@ -9,14 +9,14 @@
 })
 export class Contacts {
   title = 'Contacts';
-  public user = {
+  user = {
     username: '',
     useremail: '',
     usermachine: '',
     gender: 'male'
   };
 
-  public genders = [
+  genders = [
     'male',
     'female'
   ];

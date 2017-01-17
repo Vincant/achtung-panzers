@@ -1,8 +1,9 @@
 <h2 class="title-md">{{title}}</h2>
-<form (ngSubmit)="onSubmit(contacts)" #contacts="ngForm">
+<form (ngSubmit)="onSubmit(contactsForm)" #contactsForm="ngForm">
   <ul class="clear-ul">
     <li>
-      <input type="text" id="user_name" name="user-name" [(ngModel)]="user.username" required>
+      <input type="text" id="user_name" name="user-name" [(ngModel)]="user.username" #userEmail="ngModel" required>
+      <span class="error" *ngIf="!userEmail.valid">Invalid Name</span>
     </li>
     <li>
       <input type="text" id="user_email" name="user-email" [(ngModel)]="user.useremail">
@@ -17,7 +18,7 @@
       </label>
     </li>
     <button type="reset">Cancel</button>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!contactsForm.valid">Submit</button>
   </ul>
 </form>
 

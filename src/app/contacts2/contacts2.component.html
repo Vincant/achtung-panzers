@@ -1,0 +1,29 @@
+<h2 class="title-md">{{title}}</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <ul class="clear-ul">
+    <li>
+      <input type="text" id="user_name" name="user-name" formControlName="username">
+    </li>
+    <li>
+      <input type="text" id="user_email" name="user-email" formControlName="useremail">
+      <span class="error" *ngIf="!myForm.get('useremail').valid">Invalid Email</span>
+    </li>
+    <li>
+      <input type="text" id="user_machine" name="user-machine" formControlName="usermachine">
+      <span class="error" *ngIf="!myForm.controls['usermachine'].valid">Invalid Machine</span>
+    </li>
+    <li *ngFor="let g of genders">
+      <label for="">
+        <input type="radio" name="gender" formControlName="gender" [value]="g">
+        {{g}}
+      </label>
+    </li>
+    <li>
+      <input type="text" id="user_favorite" name="favorite" formControlName="favorite">
+      <span class="error" *ngIf="!myForm.controls['favorite'].valid">Invalid Favorite</span>
+    </li>
+    <button type="reset">Cancel</button>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  </ul>
+</form>
+
