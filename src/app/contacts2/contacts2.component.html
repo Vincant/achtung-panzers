@@ -18,12 +18,15 @@
         {{g}}
       </label>
     </li>
-    <li>
-      <input type="text" id="user_favorite" name="favorite" formControlName="favorite">
-      <span class="error" *ngIf="!myForm.controls['favorite'].valid">Invalid Favorite</span>
+    <li formArrayName="hobbies">
+		<div *ngFor="let hobby of myForm.controls['hobbies'].controls; let i = index">
+		    <input type="text" id="user_hobbies" name="hobbies" formControlName="{{i}}">
+		</div>
+        <span class="error" *ngIf="!myForm.controls['hobbies'].valid">Invalid Hobbies</span>
     </li>
-    <button type="reset">Cancel</button>
-    <button type="submit" [disabled]="!myForm.valid">Submit</button>
   </ul>
+  <button type="button" (click)="reset()">Custom Reset Form</button>
+  <button type="button" (click)="onAddHobby()">Add Hobby</button>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
 </form>
 
